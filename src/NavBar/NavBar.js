@@ -10,7 +10,7 @@ class NavBar extends Component {
       <div>
         <div>
           <ul>
-            <li><NavLink to="/"><FontAwesomeIcon icon={faFilm}/>Home</NavLink></li>
+            <li><NavLink to="/"><FontAwesomeIcon icon={faFilm}/> Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
           </ul>
         </div>

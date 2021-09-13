@@ -1,15 +1,18 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import config from './config';
+import config from '../config';
+import { Link } from 'react-router-dom';
+import MovieRec from './MovieRec';
 
 class Movie extends Component {
   constructor(){
     super();
     this.state = {
-      movie: {}
+      movie: {},
+      buttonState: false,
     }
   }
-
+  
   componentDidMount(){
     const mid = this.props.match.params.movieId
     const singleMovie = `https://api.themoviedb.org/3/movie/${mid}?api_key=${config.api_key}`
@@ -20,13 +23,34 @@ class Movie extends Component {
       })
     })
   }
+
+  showReviews = () => {
+    this.setState({
+      buttonState: true,
+    })
+  }
+
+  hideReviews = () => {
+    this.setState({
+      buttonState: false,
+    })
+  }
+
   render(){
-    // console.log(this.props.match)
-    if(this.state.movie.title === undefined){
-      return(<h1>Loading...</h1>)
-    }
+    
+    let mid = this.props.match.params.movieId
     const movie = this.state.movie;
     const imageUrl = `http://image.tmdb.org/t/p/w300${movie.poster_path}`;
+
+    let similar;
+    if (this.state.buttonState === true) {
+      similar = <div><button onClick={this.hideReviews}>Hide Similar Movies</button><MovieRec mid={mid}/> 
+        </div>
+      
+    } else {
+      similar = <button onClick={this.showReviews}>Show Similar Movies</button>
+    }
+
     return(
         <div>
           <img src={imageUrl} />
@@ -34,6 +58,9 @@ class Movie extends Component {
           <p>Budget: {movie.budget}</p>
           <p>Tagline: {movie.tagline}</p>
           <p>Overview: {movie.overview}</p>
+
+          {similar}
+          {/* <MovieRec mid={mid}/> */}
         </div>
     )
   }
