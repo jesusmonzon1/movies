@@ -37,6 +37,7 @@ class Home extends Component {
     })
     return(
       <div className="row">
+        <h2>Welcome! Search below for Movies</h2>
         <SearchBox history={this.props.history} />
         
         <h2>Now Playing</h2>

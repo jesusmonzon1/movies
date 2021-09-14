@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import config from '../config';
 import { Link } from 'react-router-dom';
 import MovieRec from './MovieRec';
+import './Movie.css';
 
 class Movie extends Component {
   constructor(){
@@ -52,16 +53,24 @@ class Movie extends Component {
     }
 
     return(
+      <div >
         <div>
-          <img src={imageUrl} />
-          <p>{movie.title}</p>
-          <p>Budget: {movie.budget}</p>
-          <p>Tagline: {movie.tagline}</p>
-          <p>Overview: {movie.overview}</p>
-
-          {similar}
-          {/* <MovieRec mid={mid}/> */}
+          <div className="movie-body">
+              <img src={imageUrl} />
+            
+            <div>
+              <p>{movie.title}</p>
+              <p>Budget: {movie.budget}</p>
+              <p>Tagline: {movie.tagline}</p>
+              <p>Overview: {movie.overview}</p>
+            </div>
+          </div>
+          <div>
+            {similar}
+          </div>
         </div>
+      </div>
+        
     )
   }
 }

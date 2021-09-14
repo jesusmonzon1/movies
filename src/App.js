@@ -5,7 +5,7 @@ import Movie from './MoviePage/Movie';
 import About from './About/About';
 import NavBar from './NavBar/NavBar';
 import MovieRec from './MoviePage/MovieRec';
-import Search from './Search/Search';
+import Search from './MoviePage/MovieSearch';
 
 function App() {
   return (

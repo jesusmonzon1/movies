@@ -8,11 +8,11 @@ class Slider extends Component {
 
   render(){
     const settings = {
-      dots: true,
+      // dots: true,
       infinite: true,
       speed: 500,
       autoplay: true,
-      // centerMode: true,
+      centerMode: true,
       arrows: true,
       slidesToShow: 4,
       slidesToScroll: 1,

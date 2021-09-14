@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import config from '../config';
 import axios from 'axios';
-import MovieResult from '../MoviePage/MovieResult';
 import { Link } from 'react-router-dom';
+import './Movie.css';
 
 class Search extends Component{
 
@@ -27,21 +27,35 @@ async componentDidMount(){
         
         <div key={index}>
           <Link to={`/movie/${movie.id}`}>
-            <img src={`${imageUrl}${movie.poster_path}`} />
-            <div>
-              {movie.original_title}
-            </div>
-            <div>
-              {movie.release_date}
+            <div className="movie-results">
+              <img src={`${imageUrl}${movie.poster_path}`} />
+              <div className="movie-results-text">
+                {movie.original_title}
+              <br/>
+                {movie.release_date}
+              </div>
             </div>
           </Link>
         </div>
       )
     })
+    const searchTerm1 = this.props.match.params.searchTerm;
     return(
-    <div>
-      { movieResults }
-    </div>
+      <div>
+        <div className="movie-results-text">
+          results for {searchTerm1}
+        </div>
+        
+        <div className="movie-body">
+        
+        <div>
+          
+          { movieResults }
+        </div>
+      </div>
+      </div>
+     
+    
     )
   }
 }
