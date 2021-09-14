@@ -3,6 +3,7 @@ import axios from 'axios';
 import config from './config';
 import { Link } from 'react-router-dom';
 import SlickSlider from './Slider/Slider';
+import SearchBox from './Search/SearchBox';
 
 
 class Home extends Component {
@@ -36,7 +37,8 @@ class Home extends Component {
     })
     return(
       <div className="row">
-        {/* {movieGrid} */}
+        <SearchBox history={this.props.history} />
+        
         <h2>Now Playing</h2>
         <SlickSlider elements={movieGrid}/>
       </div>

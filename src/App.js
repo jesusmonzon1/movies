@@ -5,6 +5,7 @@ import Movie from './MoviePage/Movie';
 import About from './About/About';
 import NavBar from './NavBar/NavBar';
 import MovieRec from './MoviePage/MovieRec';
+import Search from './Search/Search';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" component={NavBar} />
         <Route path="/about" component={About} />
         <Route exact path="/movie/:movieId" component={Movie}  />
+        <Route path="/search/:searchTerm" component={Search} />
         <Route exact path="/" component={Home} />
       </div>
     </Router>
