@@ -6,9 +6,9 @@ input, textarea {
 }
 
 .search {
-  padding: 2px;
+  padding: 5px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
-  width: 500px;
+  width: 600px;
 }

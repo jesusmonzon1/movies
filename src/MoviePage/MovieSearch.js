@@ -42,16 +42,14 @@ async componentDidMount(){
     const searchTerm1 = this.props.match.params.searchTerm;
     return(
       <div>
-        <div className="movie-results-text">
-          results for {searchTerm1}
+        <div className="movie-results-top">
+          Results for {searchTerm1}
         </div>
         
         <div className="movie-body">
-        
-        <div>
-          
-          { movieResults }
-        </div>
+          <div>
+            { movieResults }
+          </div>
       </div>
       </div>
      

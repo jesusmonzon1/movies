@@ -3,7 +3,7 @@ import config from '../config';
 import axios from 'axios';
 import { Link, useHistory } from 'react-router-dom';
 import SlickSlider from '../Slider/Slider';
-import Movie from './Movie';
+
 
 class MovieRec extends Component {
   constructor(){

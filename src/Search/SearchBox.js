@@ -18,7 +18,7 @@ class SearchBox extends Component {
     return(
       <div>
         <form onSubmit={this.submitSearch}>
-          <input className="search" onChange={this.changeSearch} placeholder="Search movies" value={this.state.search} type="text" />
+          <input className="search" onChange={this.changeSearch} placeholder="Search Film Titles" value={this.state.search} type="text" />
         </form>
       </div>
     )
