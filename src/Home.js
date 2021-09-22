@@ -48,6 +48,7 @@ class Home extends Component {
           <h2>Now Playing</h2>
         </div>
         <SlickSlider elements={movieGrid}/>
+        <br></br>
       </div>
     )
   }

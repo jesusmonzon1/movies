@@ -45,7 +45,8 @@ a {
   font-size: 60px;
 }
 .buttonDiv {
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 .buttonDiv {
   display: flex;
